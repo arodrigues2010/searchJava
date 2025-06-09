@@ -1,0 +1,28 @@
+
+Pasos: 
+
+1. ejecuatar compose.yaml (Tener instalado el Docker Desktop)
+2. ejecutar los scripts en base de datos
+
+CREATE TABLE public.searches (
+	id uuid DEFAULT gen_random_uuid() NOT NULL,
+	hotel_id varchar(255) NULL,
+	check_in date NULL,
+	check_out date NULL,
+	CONSTRAINT searches_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE public.search_ages (
+	id uuid DEFAULT gen_random_uuid() NOT NULL,
+	search_id varchar(255) NULL,
+	age int4 NULL
+);
+
+
+http://localhost:8080/swagger-ui/index.html
+
+
+Hola, muchas gracias por la oportunidad. Quisiera comentar que esta solución no es la más óptima, 
+ya que presenta ciertas limitaciones que podrían afectar su eficacia. Sería ideal considerar 
+alternativas que mejoren el rendimiento y la eficiencia del proceso. 
+Estoy disponible para explorar otras opciones y contribuir con ideas para optimizar la solución.
